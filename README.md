@@ -12,20 +12,6 @@ CV Studio is a Computer Vision learning tool for building, running, and managing
 
 ----------------------------------------------------------
 
-# Usge
-
-Simply enter the URL of the web app below into any web browser, and enjoy testing the model:
-
-`
-https://stop-not-stop-app-635dc9a1b6ccf16d413f30f6.u8wpmjcrkw2.eu-gb.codeengine.appdomain.cloud/
-`
-
-You can upload or drop & drag an image with or without a stop sign and the classifier will classify it.
-
-![](images/the-app.png)
-
-----------------------------------------------------------
-
 # Project steps / pipline:
 
   * ## 1- Built the dataset
@@ -75,16 +61,20 @@ You can upload or drop & drag an image with or without a stop sign and the class
 
 I tested the app on several images, and the overall performance of the classifier seems very good.
 
-correct stop1 
-![](images/correct-stop-1.png)
+correct stop1
+
+![](images/correct-stop-1.png "correct stop1")
 
 correct stop2 
+
 ![](images/correct-stop-2.png)
 
-correct stop3 
+correct stop3
+
 ![](images/correct-stop-3.png)
 
-correct stop4 
+correct stop4
+
 ![](images/correct-stop-4.png)
 
 correct not-stop1 
