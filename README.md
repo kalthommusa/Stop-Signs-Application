@@ -61,50 +61,50 @@ CV Studio is a Computer Vision learning tool for building, running, and managing
 
 I tested the app on several images, and the overall performance of the classifier seems very good.
 
-correct stop1
+correct stop1:
 
 ![](images/correct-stop-1.png)
 
-correct stop2
+correct stop2:
 
 ![](images/correct-stop-2.png)
 
-correct stop3
+correct stop3:
 
 ![](images/correct-stop-3.png)
 
-correct stop4
+correct stop4:
 
 ![](images/correct-stop-4.png)
 
-correct not-stop1 
+correct not-stop1: 
 
 ![](images/correct-not-stop-1.png)
 
-correct not-stop2 prediction 
+correct not-stop2 prediction: 
 
 ![](images/correct-not-stop-2.png)
 
-correct not-stop3 prediction
+correct not-stop3 prediction:
 
 ![](images/correct-not-stop-4.png)
 
 
 However, it failed to correctly classify the images below.
 
-incorrect not-stop prediction
+incorrect not-stop prediction:
 
 ![](images/misclassified-not-stop-3.png) 
 
-incorrect stop1 prediction
+incorrect stop1 prediction:
 
 ![](images/misclassified-stop1.png)
 
-incorrect stop2 prediction
+incorrect stop2 prediction:
 
 ![](images/misclassified-stop2.png)
 
-incorrect stop3 prediction
+incorrect stop3 prediction:
 
 ![](images/misclassified-stop3.png)
 
@@ -126,11 +126,11 @@ Therefore, I gathered and uploaded more images on CV Studio. I doubled the size 
 
 Then, I retrained the deep neural network on the updated dataset. Apparently, an increase in the number of images led to an increase in the accuracy of the custom model, as well as an increase in the total training run time. 
 
-accuracy & training run time of 200 images
+accuracy & training run time of 200 images:
 
 ![](images/accuracy-200.png)
 
-accuracy & training run time of 400 images
+accuracy & training run time of 400 images:
 
 ![](images/accuracy-400.png)
 
@@ -139,19 +139,19 @@ By feeding the classifier with more data, it gets to learn more information abou
 
 As we can see in the images below, the deep neural network correctly classified the previously misclassified images, which indicates an improved performance.
 
-correct not-stop4 prediction
+correct not-stop4 prediction:
 
 ![](images/correct-misclassified-stop-3.png)
 
-correct stop1 prediction
+correct stop1 prediction:
 
 ![](images/correct-misclassified-stop1.png)
 
-correct stop2 prediction
+correct stop2 prediction:
 
 ![](images/correct-misclassified-stop2.png)
 
-correct stop3 prediction
+correct stop3 prediction:
 
 ![](images/correct-misclassified-stop3.png)
 
