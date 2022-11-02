@@ -1,12 +1,12 @@
-# Objective
+# Project Objective
 
-Design, train, and test deep convolutional neural networks with transfer learning to perform stop signs classification task with PyTorch and IBM Computer Vision Studio.
+Design, train, and test deep convolutional neural networks with transfer learning to perform a stop sign classification task with PyTorch and IBM Computer Vision Studio.
 
 ----------------------------------------------------------
 
 # CV Studio
 
-When building Computer Vision applications, we deal with a lot of images, videos and other assets that require storage. Image processing also requries significant computing power. The ultimate goal of every computer vision project is to have it deployed as part of an application and every application requires infrastructure to run.
+When building Computer Vision applications, we deal with a lot of images, videos, and other assets that require storage. Image processing also requires significant computing power. The ultimate goal of every computer vision project is to have it deployed as part of an application and every application requires infrastructure to run.
 
 CV Studio is a Computer Vision learning tool for building, running, and managing AI Vision computer models and optimizing decisions anywhere on the IBM Cloud. It uses cutting-edge tools like Jupyter Notebook, Watson Machine Learning, Elyra, and more.
 
@@ -28,9 +28,15 @@ You can upload or drop & drag an image with or without a stop sign and the class
 
 # Project steps / pipline:
 
-  * 1- Built the datast
+  * ## 1- Built the dataset
 
-  Initily I uploaded a 200 images on CV Studio
+  After logging into CV Studio and creating a new project, I collected and uploaded 200 images divided into 100 images with stop sign and 100 images without stop sign.
+
+  ![correct stop-1](images/create-project.png)
+
+  ![correct stop-1](images/200-uploaded-images.png)
+
+  ----------------------------------------------------------
 
   * 2- Annotate the dataset
 
