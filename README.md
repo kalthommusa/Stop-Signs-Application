@@ -22,7 +22,7 @@ https://stop-not-stop-app-635dc9a1b6ccf16d413f30f6.u8wpmjcrkw2.eu-gb.codeengine.
 
 You can upload or drop & drag an image with or without a stop sign and the classifier will classify it.
 
-![misclassified stop-3](images/the-app.png)
+![](images/the-app.png)
 
 ----------------------------------------------------------
 
@@ -32,95 +32,123 @@ You can upload or drop & drag an image with or without a stop sign and the class
 
   After logging into CV Studio and creating a new project, I collected and uploaded 200 images divided into 100 images with stop sign and 100 images without stop sign.
 
-  ![correct stop-1](images/create-project.png)
+  ![](images/create-project.png)
 
-  ![correct stop-1](images/200-uploaded-images.png)
+  ![](images/200-uploaded-images.png)
 
   ----------------------------------------------------------
 
-  * 2- Annotate the dataset
+  * ## 2- Annotate the dataset
 
-  Here I created two classes or labels: 
-  stop
-  not-stop
-  then divided and labeled the uploaded images as a 100 images of each class
+  Since I named my folders with the respective categories (stop, don't stop) when I uploaded my images in the previous upload step, the annotation happened automatically on CV Studio. 
 
-  * 3- Train the model
+  And here in the annotate section, I verified that my images are labeled as expected.
 
-  Develop & train a model by creating a new training run on CV Studio.
+  ![](images/200-uploaded-images.png)
 
+  ----------------------------------------------------------
 
-  Used a Jubytur notbook on CV Studio to design and train a custom classifier 
+  * ## 3- Train the model
 
-  using `ResNet` pretrained model archtecther as a fixed feature extractor to perform a Supervised Machine Learning Task  
+  I chose a Jupyter notebook as a "Training tool" and used the image annotations from the previous step to train a CNN model using transfer learning (using the `ResNet` pre-trained model as a fixed feature extractor) to perform a stop sign classification task with PyTorch. 
 
-  deploy the custom model on IBM CV Studio to make predictions on new images.
+  ![](images/creating-traning-run.png)
+  ![](images/results-after-training-200.png) 
 
+  ----------------------------------------------------------
 
-  * 4- Test the model
+  * ## 4- Test the model
 
+  To test the classifier, enter the URL of the web app below into any web browser, and enjoy testing the model:
 
-labeled in the Annotation tab of CV Studio.
+  `
+  https://stop-not-stop-app-635dc9a1b6ccf16d413f30f6.u8wpmjcrkw2.eu-gb.codeengine.appdomain.cloud/
+  `
+
+  Upload or drop & drag an image into the box and the prediction of the deep network will show at the bottom.
+
+  ![](images/the-app.png)
+
+----------------------------------------------------------
 
 # Results & Observation
 
-The Overall performance of the classifier seems pretty good on the test data, the classifier was able to classify all of the stop test images correctly as well as the majority of the not-stop test images.
+I tested the app on several images, and the overall performance of the classifier seems very good.
 
-![correct stop-1](images/correct-stop-1.png)
+correct stop1 
+![](images/correct-stop-1.png)
 
-![correct stop-2](images/correct-stop-2.png)
+correct stop2 
+![](images/correct-stop-2.png)
 
-![correct stop-3](images/correct-stop-3.png)
+correct stop3 
+![](images/correct-stop-3.png)
 
-![correct stop-4](images/correct-stop-4.png)
+correct stop4 
+![](images/correct-stop-4.png)
 
-![correct not-stop-1](images/correct-not-stop-1.png)
-![correct not-stop-2](images/correct-not-stop-2.png)
-![correct not-stop-4](images/correct-not-stop-4.png)
+correct not-stop1 
+![](images/correct-not-stop-1.png)
 
-However, it fails to recognize the not-stop below correctly and classified as a stop one.
-![misclassified not-stop-3](images/misclassified-not-stop-3.png) 
+correct not-stop2 prediction 
+![](images/correct-not-stop-2.png)
 
-Moreover, I have tested the app with more unseen imges and catched these misclassied results by the classifier.
+correct not-stop3 prediction
+![](images/correct-not-stop-4.png)
 
-![misclassified stop-1](images/misclassified-stop1.png)
 
-![misclassified stop-2](images/misclassified-stop2.png)
+However, it failed to correctly classify the images below.
 
-![misclassified stop-3](images/misclassified-stop3.png)
+incorrect not-stop prediction
+![](images/misclassified-not-stop-3.png) 
 
+incorrect stop1 prediction
+![](images/misclassified-stop1.png)
+
+incorrect stop2 prediction
+![](images/misclassified-stop2.png)
+
+incorrect stop3 prediction
+![](images/misclassified-stop3.png)
+
+
+----------------------------------------------------------
 
 # Re-train The Model
 
-Machine learning workflow is an iterative process, and it is preety common when develop a machine learning model to take a step/s back and adjust some steps in order to improve the performace of the classifier and make it produce better peridctions.
+Machine learning workflow is an iterative process, and it is pretty common when developing a machine learning model to take a step/steps back and make some adjustements to improve the performance of the classifier and make it produce better predictions.
 
+My custom deep neural network made some mistakes in classifying some of the test images due to the small number of training dataset on which I trained the model. One way to improve classifier performance is to increase the size of the training dataset.
 
-My custom deep nueral network made some mistakes peridcting the wrong class of some of the test images due to the lack of the number of the training dataset, one way to increase the performance of the classifier is to increase the size of the training dataset.
-
-Therefore I gathured more images, uploaded and annotated them on CV Studio. I have doubled the size of the training dataset,so my new dataset has 400 images divided into 200 images for each class.
+Therefore, I gathered and uploaded more images on CV Studio. I doubled the size of the training dataset, so my new dataset contains 400 images divided into 200 images per class.
 
 ![](images/400-uploaded-images.png)
 
 ![](images/400-annotated-images.png)
 
 
-Then I retranied the deep neural network on the updated dataset. And it terns out, incraesing the number of images leads to increase the accuracy of the custom model, as well as the overall trainig run time. 
+Then, I retrained the deep neural network on the updated dataset. Apparently, an increase in the number of images led to an increase in the accuracy of the custom model, as well as an increase in the total training run time. 
 
-![accuracy & trainig run time bafore adding more images](images/accuracy-200.png)
+accuracy & training run time of 200 images
+![](images/accuracy-200.png)
+
+accuracy & training run time of 400 images
+![](images/accuracy-400.png)
 
 
-![accuracy & trainig run time after adding more images](images/accuracy-400.png)
+By feeding the classifier with more data, it gets to learn more information about stop and not-stop signs and understand the relationship between input and output, and as a result, it became smarter and made better predictions.  
 
+As we can see in the images below, the deep neural network correctly classified the previously misclassified images, which indicates an improved performance.
 
-By feeding the classifier more data it get to learn more information about the stop & not-stop sings and understand the relationship between the input and the output, as a result it becoms more smarter and gave better peridctions.
+correct not-stop4 prediction
+![](images/correct-misclassified-stop-3.png)
 
-As we can see in the images below, the deep neural network was able to correctly clasify the prefously misclassifief images, which indicats improved performance.
+correct stop1 prediction
+![](images/correct-misclassified-stop1.png)
 
-![accuracy & trainig run time after adding more images](images/correct-misclassified-stop-3.png)
+correct stop2 prediction
+![](images/correct-misclassified-stop2.png)
 
-![accuracy & trainig run time after adding more images](images/correct-misclassified-stop1.png)
-
-![accuracy & trainig run time after adding more images](images/correct-misclassified-stop2.png)
-
-![accuracy & trainig run time after adding more images](images/correct-misclassified-stop3.png)
+correct stop3 prediction
+![](images/correct-misclassified-stop3.png)
 
