@@ -90,7 +90,7 @@ correct not-stop3 prediction:
 ![](images/correct-not-stop-4.png)
 
 
-However, it failed to correctly classify the images below.
+However, the classifier failed to correctly classify the images below.
 
 incorrect not-stop prediction:
 
