@@ -61,13 +61,9 @@ CV Studio is a Computer Vision learning tool for building, running, and managing
 
 I tested the app on several images, and the overall performance of the classifier seems very good.
 
-correct stop1
-
 ![](images/correct-stop-1.png "correct stop1")
 
-correct stop2 
-
-![](images/correct-stop-2.png)
+![](images/correct-stop-2.png "correct stop2")
 
 correct stop3
 
