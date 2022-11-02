@@ -1,34 +1,30 @@
-# Transfer Learning with Convolutional Neural Networks For Stop Sign Classification (Supervised Machine Learning Task) with PyTorch and Computer Vision Studio.
+# Objective
+
+Design, train, and test deep convolutional neural networks with transfer learning to perform stop signs classification task with PyTorch and IBM Computer Vision Studio.
 
 ----------------------------------------------------------
 
-# Objective
-
-Design, train, and test a deep convolutional neural networks with transfer learning using Resnet pretrained model as a fixed feature extractor archtecther,and then deploy the custom model on CV Studio to make predictions on new images.
-
-Develop a new custom classifier with PyTorch using transfer learning (a classification method that takes advantis of a pre-trained model that has train revously on a very large dataset such as ImageNet), and then deploy it as a web app using Code Engine on IBM cloud.
-
 # CV Studio
 
-Computer Vision Learning Studio uses IBM Cloud Object Storage to store your uploaded media and annotations, so it is required to have an IBM Cloud account. 
+When building Computer Vision applications, we deal with a lot of images, videos and other assets that require storage. Image processing also requries significant computing power. The ultimate goal of every computer vision project is to have it deployed as part of an application and every application requires infrastructure to run.
 
+CV Studio is a Computer Vision learning tool for building, running, and managing AI Vision computer models and optimizing decisions anywhere on the IBM Cloud. It uses cutting-edge tools like Jupyter Notebook, Watson Machine Learning, Elyra, and more.
 
-
-
-# Tools & Libraries
-
-
+----------------------------------------------------------
 
 # Usge
 
-Simply just enter the URL of the web app below into any web browser, and have fun testing the model:
+Simply enter the URL of the web app below into any web browser, and enjoy testing the model:
 
 `
 https://stop-not-stop-app-635dc9a1b6ccf16d413f30f6.u8wpmjcrkw2.eu-gb.codeengine.appdomain.cloud/
 `
 
+You can upload or drop & drag an image with or without a stop sign and the classifier will classify it.
+
 ![misclassified stop-3](images/the-app.png)
 
+----------------------------------------------------------
 
 # Project steps / pipline:
 
@@ -50,11 +46,15 @@ https://stop-not-stop-app-635dc9a1b6ccf16d413f30f6.u8wpmjcrkw2.eu-gb.codeengine.
 
   Used a Jubytur notbook on CV Studio to design and train a custom classifier 
 
+  using `ResNet` pretrained model archtecther as a fixed feature extractor to perform a Supervised Machine Learning Task  
+
+  deploy the custom model on IBM CV Studio to make predictions on new images.
+
 
   * 4- Test the model
 
 
-
+labeled in the Annotation tab of CV Studio.
 
 # Results & Observation
 
@@ -77,11 +77,11 @@ However, it fails to recognize the not-stop below correctly and classified as a 
 
 Moreover, I have tested the app with more unseen imges and catched these misclassied results by the classifier.
 
-![misclassified stop-1](images/project_st1.png)
+![misclassified stop-1](images/misclassified-stop1.png)
 
-![misclassified stop-2](images/project_st1.png)
+![misclassified stop-2](images/misclassified-stop2.png)
 
-![misclassified stop-3](images/project_st1.png)
+![misclassified stop-3](images/misclassified-stop3.png)
 
 
 # Re-train The Model
