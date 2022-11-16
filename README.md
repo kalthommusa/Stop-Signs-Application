@@ -8,7 +8,7 @@ Design, train, and test deep convolutional neural networks with transfer learnin
 
 When building Computer Vision applications, we deal with a lot of images, videos, and other assets that require storage. Image processing also requires significant computing power. The ultimate goal of every computer vision project is to have it deployed as part of an application and every application requires infrastructure to run.
 
-CV Studio is a Computer Vision learning tool for building, running, and managing AI Vision computer models and optimizing decisions anywhere on the IBM Cloud. It uses cutting-edge tools like Jupyter Notebook, Watson Machine Learning, Elyra, and more.
+CV Studio https://vision.skills.network/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera25797139-2022-01-01 is a Computer Vision learning tool for building, running, and managing AI Vision computer models and optimizing decisions anywhere on the IBM Cloud. It uses cutting-edge tools like Jupyter Notebook, Watson Machine Learning, Elyra, and more.
 
 ----------------------------------------------------------
 
@@ -26,11 +26,11 @@ CV Studio is a Computer Vision learning tool for building, running, and managing
 
   * ## 2- Annotate the dataset
 
-  Since I named my folders with the respective categories (stop, don't stop) when I uploaded my images in the previous upload step, the annotation happened automatically on CV Studio. 
+  Since I named both of my folders with the respective categories (stop, not_stop) when I uploaded my images in the previous upload step, the annotation happened automatically on CV Studio. 
 
   And here in the annotate section, I verified that my images are labeled as expected.
 
-  ![](images/200-uploaded-images.png)
+  ![](images/200-annotated-images.png)
 
   ----------------------------------------------------------
 
@@ -135,7 +135,7 @@ accuracy & training run time of 400 images:
 ![](images/accuracy-400.png)
 
 
-By feeding the classifier with more data, it gets to learn more information about stop and not-stop signs and understand the relationship between input and output, and as a result, it became smarter and made better predictions.  
+By feeding the classifier with more data, it gets to learn more information about stop and not-stop signs images and understand the relationship between input and output, and as a result, it became smarter and made better predictions.  
 
 As we can see in the images below, the deep neural network correctly classified the previously misclassified images, which indicates an improved performance.
 
